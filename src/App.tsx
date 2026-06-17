@@ -33,14 +33,14 @@ const EXPERIENCE = [
     period: "DEC 2024 — PRESENT",
     location: "Chennai, India",
     bullets: [
-      "Developed and deployed production-ready multi-agent workflows using LangGraph to automate complex enterprise decision-making processes.",
-      "Integrated OpenAI Realtime API for low-latency voice-to-agent interactions, enhancing user experience in customer support modules.",
-      "Architected persistent memory systems using Mem0AI, allowing agents to retain context across long-running user sessions.",
-      "Implemented Model Context Protocol (MCP) to standardize tool-use between disparate AI services and local infrastructure.",
-      "Optimized RAG pipelines by implementing hybrid search strategies, reducing factual hallucinations by 35% in legal document analysis.",
-      "Utilized LangSmith for rigorous evaluation, tracing, and debugging of LLM chains to ensure high reliability.",
-      "Engineered scalable backend services with FastAPI and Redis, supporting high-throughput agentic task execution.",
-      "Collaborated on the deployment of private LLM instances on AWS to ensure data privacy and compliance for healthcare clients."
+      "Architected and deployed production-ready multi-agent workflows using LangGraph and LangChain to automate complex enterprise decision-making, reducing manual intervention across healthcare automation pipelines.",
+      "Integrated OpenAI Realtime API for sub-100ms voice-to-agent interactions, enabling real-time conversational AI for enterprise customer support modules.",
+      "Built persistent memory architecture using Mem0AI, enabling long-session context retention for AI agents and improving conversation continuity across user interactions.",
+      "Implemented Model Context Protocol (MCP) to standardize tool-use interfaces between disparate AI services and local infrastructure, reducing integration complexity.",
+      "Optimized RAG pipelines using hybrid search (vector + BM25), query rewriting, and cross-encoder reranking strategies, reducing factual hallucinations by 35% in legal document analysis workflows.",
+      "Monitored and evaluated LLM chain performance using LangSmith for end-to-end tracing, debugging, and observability, ensuring production-grade reliability.",
+      "Engineered scalable backend microservices using FastAPI and Redis with async processing, supporting high-throughput agentic task execution.",
+      "Deployed HIPAA-compliant private LLM instances on AWS (Lambda, EC2), ensuring data privacy and regulatory compliance for healthcare clients."
     ]
   },
   {
@@ -61,11 +61,13 @@ const EXPERIENCE = [
     period: "JAN 2024 — JUN 2024",
     location: "Remote",
     bullets: [
-      "Architected and deployed a Retrieval-Augmented Generation (RAG) system using Python, Flask, and OpenAI's GPT-4, enabling real-time, context-aware document answering for enterprise-scale datasets.",
-      "Engineered high-performance QA pipelines by integrating vector databases (ChromaDB/Pinecone) and semantic search, reducing document retrieval latency by 40% and improving answer relevance.",
-      "Optimized LLM performance through advanced prompt engineering and strategic chunking methods, resulting in a 25% increase in factual accuracy across complex technical documentation.",
-      "Developed a scalable full-stack architecture, integrating a React-based frontend with a robust Flask backend, ensuring seamless data flow and high system availability.",
-      "Implemented rigorous evaluation frameworks using LangSmith and custom metrics to benchmark model performance, ensuring production-grade reliability and consistency."
+      "Architected and deployed a production-grade Retrieval-Augmented Generation (RAG) system using Python, FastAPI, and OpenAI GPT-4, enabling real-time, context-aware document answering for enterprise-scale datasets.",
+      "Implemented advanced RAG pipelines with hybrid search (vector + BM25), query rewriting, expansion, and cross-encoder/LLM-based reranking, improving domain-specific retrieval relevance and reducing document retrieval latency by 40%.",
+      "Developed and maintained RESTful APIs using FastAPI with layered architecture (Router → Service → Repository) and implemented role-based access control (RBAC) using JWT, OAuth2, and FastAPI security middleware.",
+      "Designed and managed MySQL databases using SQLAlchemy ORM with optimized schema design, indexing strategies, and query joins to enhance data retrieval performance and application maintainability.",
+      "Designed Agentic AI systems using LangChain and LangGraph for autonomous reasoning, multi-step task planning, and execution across financial workflows with guardrails, prompt versioning, and fallback strategies for safe production deployment.",
+      "Optimized LLM response accuracy by 25% through advanced prompt engineering and strategic chunking techniques across complex technical documentation.",
+      "Implemented rigorous LLM evaluation frameworks using LangSmith and RAGAS-based custom metrics to benchmark model performance and ensure production-grade reliability."
     ]
   }
 ];
@@ -87,41 +89,86 @@ const INTERNSHIPS = [
 
 const SKILLS = [
   {
-    category: "Backend Core",
+    category: "Generative AI",
     items: [
-      { name: "Python", label: "STABLE" },
-      { name: "PostgreSQL", label: "V16+" },
-      { name: "FastAPI / Flask", label: "ASYNC" },
-      { name: "Redis / Docker", label: "ORCHESTRA" }
+      { name: "Agentic AI", label: "AUTONOMY" },
+      { name: "RAG Systems", label: "HYBRID" },
+      { name: "ReAct Framework", label: "REASONING" },
+      { name: "RAGAS", label: "EVALUATION" },
+      { name: "LoRa Fine-Tuning", label: "ADAPT" },
     ]
   },
   {
-    category: "AI/LLM Stack",
+    category: "LLM Orchestration",
     items: [
-      { name: "LangChain/Graph", label: "CORE" },
-      { name: "Agentic RAG", label: "MODERN" },
+      { name: "LangChain", label: "CHAIN" },
+      { name: "LangGraph", label: "STATEFUL" },
       { name: "Multi-Agent Systems", label: "AUTONOMY" },
-      { name: "DSPy / Pydantic", label: "TYPED" }
+      { name: "DSPy", label: "TYPED" },
+      { name: "Pydantic", label: "VALIDATION" },
+      { name: "OpenAI GPT", label: "INTEGRATE" },
+      { name: "Claude / MCP", label: "INTEGRATE" },
     ]
   },
   {
-    category: "Evaluation",
+    category: "Backend",
+    items: [
+      { name: "Python", label: "PRIMARY" },
+      { name: "FastAPI", label: "ASYNC" },
+      { name: "Flask", label: "REST" },
+      { name: "Django", label: "REST" },
+      { name: "Redis", label: "CACHE" },
+      { name: "Celery", label: "QUEUE" },
+      { name: "Docker", label: "CONTAINER" },
+    ]
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "ChromaDB", label: "VECTOR" },
+      { name: "PostgreSQL", label: "RELATIONAL" },
+      { name: "MySQL", label: "RELATIONAL" },
+      { name: "SQLAlchemy", label: "ORM" },
+    ]
+  },
+  {
+    category: "Evaluation & Observability",
     items: [
       { name: "LangSmith", label: "TRACE" },
       { name: "LangFuse", label: "OBSERVE" },
-      { name: "pytest / SonarQube", label: "QA" },
-      { name: "Prompt Engineering", label: "OPTIM" }
+      { name: "pytest", label: "QA" },
+      { name: "SonarQube", label: "QUALITY" },
+      { name: "Prompt Engineering", label: "OPTIM" },
     ]
   },
   {
-    category: "Cloud & Protocols",
+    category: "Cloud & Infrastructure",
     items: [
-      { name: "AWS (Lambda/DDB)", label: "CLOUD" },
+      { name: "AWS Lambda", label: "SERVERLESS" },
+      { name: "DynamoDB", label: "NOSQL" },
       { name: "Azure AI", label: "ENTERPRISE" },
-      { name: "MCP Protocol", label: "SPEC" },
-      { name: "Claude / Cursor", label: "TOOLS" }
+      { name: "REST APIs", label: "HTTP" },
+      { name: "JWT / OAuth2", label: "AUTH" },
     ]
-  }
+  },
+  {
+    category: "Architecture",
+    items: [
+      { name: "SOLID Principles", label: "DESIGN" },
+      { name: "Design Patterns", label: "PATTERN" },
+      { name: "Microservices", label: "DISTRIBUTED" },
+      { name: "Agile / Scrum", label: "PROCESS" },
+    ]
+  },
+  {
+    category: "Dev Tools",
+    items: [
+      { name: "Git / GitHub", label: "VERSION" },
+      { name: "Postman", label: "TEST" },
+      { name: "Cursor", label: "IDE" },
+      { name: "Streamlit", label: "DASHBOARD" },
+    ]
+  },
 ];
 
 const PROJECTS = [
@@ -276,6 +323,9 @@ export default function App() {
             <div className="md:col-span-8">
               <div className="space-y-6 text-xl text-on-surface-variant leading-relaxed">
                 <p>
+                  Python Backend and Generative AI Developer with <span className="text-black font-semibold">3 years of experience</span> building scalable APIs and distributed systems using <span className="text-black font-semibold">FastAPI and microservices</span>. Specialized in production-grade RAG systems with hybrid search, reranking, embeddings, and LLM integrations (OpenAI, Claude) using LangChain and LangGraph. Experienced in deploying AI applications with a focus on performance, scalability, and cost optimization.
+                </p>
+                <p>
                   Strategic <span className="text-black font-semibold">AI/LLM Architect</span> dedicated to engineering high-performance, autonomous agentic systems. Specializing in the orchestration of Large Language Models to solve complex, non-linear enterprise challenges.
                 </p>
                 <p>
@@ -375,14 +425,13 @@ export default function App() {
                   <span className="w-2 h-2 bg-black" />
                   {cat.category}
                 </h4>
-                <ul className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {cat.items.map((skill, i) => (
-                    <li key={i} className="flex justify-between items-center group">
-                      <span className="text-on-surface-variant group-hover:text-black transition-colors">{skill.name}</span>
-                      <span className="font-mono text-[10px] text-outline opacity-40">{skill.label}</span>
-                    </li>
+                    <span key={i} className="px-3 py-1 border border-outline-variant text-sm text-on-surface-variant hover:border-black hover:text-black transition-colors cursor-default">
+                      {skill.name}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
